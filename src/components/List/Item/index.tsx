@@ -1,16 +1,16 @@
 import style from "../List.module.scss";
 
 export default function Item({
-  tarefa,
-  tempo,
+  task,
+  time,
 }: {
-  tarefa: string;
-  tempo: string;
+  task: string;
+  time: string;
 }) {
   return (
     <li className={style.item}>
-      <h3> {tarefa} </h3>
-      <span> {tempo} </span>
+      <h3> {task} </h3>
+      <span> {time} </span>
     </li>
   );
 }
