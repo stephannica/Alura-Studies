@@ -1,7 +1,12 @@
 import { ITask } from "../../../types/task";
 import style from "../List.module.scss";
 
-export default function Item({ task, time, selected, completed, id }: ITask) {
+interface ItemProps extends ITask{
+  selectTask: (selectedTask: ITask) => void
+}
+
+export default function Item({ task, time, selected, completed, id }: ItemProps) {
+  console.log('item atual: ', { task, time, selected, completed, id })
   return (
     <li className={style.item}>
       <h3> {task} </h3>
