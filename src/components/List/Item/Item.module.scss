@@ -1,5 +1,5 @@
 .item {
-  background-color: #4d4d4d;
+  background-color: #826C7F;
   border-radius: 8px;
   box-shadow: 2px 4px 4px #0000009f;
   padding: 12px;
@@ -22,12 +22,12 @@
 }
 
 .selectedItem {
-  background-color: #292929;
+  background-color: #554753;
   box-shadow: 2px 4px 4px #0000009f inset;
 }
 
 .completedItem {
-  background-color: #566f42;
+  background-color: #778b66;
   cursor: auto;
 
   .completed {
