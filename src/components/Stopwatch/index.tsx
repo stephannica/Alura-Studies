@@ -21,7 +21,7 @@ export default function Stopwatch({selected} : StopwatchProps) {
         <div className={style.stopwatch}>
             <p className={style.title}>Escolha um card e inicie o cronômetro</p>
             <div className={style.clockWrapper}>
-                <Clock/>
+                <Clock time={time}/>
             </div>
             <Button>
                 Começar!
