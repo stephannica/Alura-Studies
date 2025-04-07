@@ -7,8 +7,8 @@ interface ItemProps extends ITask{
 
 export default function Item({ task, time, selected, completed, id, selectTask }: ItemProps) {
   return (
-    <li className={`${style.item} ${selected ? style.selectedItem : ''}`}
-    onClick={() => selectTask({
+    <li className={`${style.item} ${selected ? style.selectedItem : ''} ${completed ? style.completedItem : ''}`}
+    onClick={() => !completed && selectTask({
       task,
       time,
       selected,
@@ -18,6 +18,8 @@ export default function Item({ task, time, selected, completed, id, selectTask }
     >
       <h3> {task} </h3>
       <span> {time} </span>
+      {completed && <span className={style.completed} aria-label="tarefa completada"></span>}
     </li>
+      
   );
 }

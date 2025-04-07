@@ -7,9 +7,10 @@ import style from "./Stopwatch.module.scss"
 
 interface StopwatchProps {
     selected: ITask | undefined;
+    finishTask: () => void;
 }
 
-export default function Stopwatch({selected} : StopwatchProps) {
+export default function Stopwatch({selected, finishTask} : StopwatchProps) {
     const [time, setTime] = useState<number>();
     
     useEffect(() => {
@@ -24,6 +25,7 @@ export default function Stopwatch({selected} : StopwatchProps) {
                 setTime(time - 1);
                 return countdown(time - 1);
             }
+            finishTask();
         }, 1000)
     }
     return(
